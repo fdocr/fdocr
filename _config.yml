@@ -29,7 +29,7 @@ url: "https://fdo.cr" # the base hostname & protocol for your site, e.g. http://
 twitter_username: fdocr
 github_username:  fdocr
 
-# google_analytics: UA-69537324-1
+google_analytics: G-HWRBQMG6P8
 
 # Build settings
 theme: minima
