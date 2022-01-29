@@ -1,0 +1,14 @@
+---
+title: "The year is 2020"
+date: 2020-04-18 9:00:00 -0600
+tags: ["blogging", "dev.to", "DEV Community", "remote", "remote work", "covid-19", "coronavirus"]
+permalink: /the-year-is-2020/
+---
+
+The year is 2020 and the world is upside down. It started off as a very promising year and I'd prefer to keep that positive mentality regardless of difficult times brought in by a global pandemic. I like to think stories of greatness are intrinsically elevated by the greatness of the challenges faced and eventually conquered. With this logic in mind we are living in a time of opportunity.
+
+I'm grateful for lots of things but the most important one this year is that [I joined the team at DEV](https://dev.to/fdoxyz/i-just-joined-the-dev-team-4pgb), which has been incredible. I realized I hadn't shared any updates in here and it's about time.
+
+It's refreshing to shift back to more hands-on mobile work with [DEV-ios](https://github.com/thepracticaldev/DEV-ios) & [DEV-Android](https://github.com/thepracticaldev/DEV-android) while also touching a [RoR codebase](https://github.com/thepracticaldev/dev.to), and that makes this a very special job for me. You'll find some of my early 2020 posts in my profile [@fdoxyz](https://dev.to/fdoxyz).
+
+Good luck out there with your own trying times, let's make it a hell of a story to tell future generations. Pura Vida!

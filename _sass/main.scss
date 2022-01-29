@@ -1,0 +1,27 @@
+$green: #4d7227;
+$red: #ff207d;
+$coffee: #BA9979;
+
+a {
+  color: $coffee !important;
+}
+
+img {
+  margin: 30px auto 30px auto;
+}
+
+.splash-display {
+  color: $coffee !important;
+  margin: 35% 0 45% 0;
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: 3px;
+  font-family: 'Ubuntu', Arial;
+}
+
+@media (min-width: 550px) {
+  .splash-display {
+    font-size: 4em;
+    margin: 10% 0;
+  }
+}
