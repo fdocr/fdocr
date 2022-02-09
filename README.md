@@ -1,5 +1,5 @@
 Hi 👋🏼
 
-Check out [fdo.cr](https://fdo.cr)
+Check out [my little corner of the internet](https://fdo.cr)
 
 Pura vida 🌴
