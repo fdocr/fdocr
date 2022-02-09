@@ -5,7 +5,7 @@ tags: ["Martilla", "CLI", "Ruby", "Backups", "PostgreSQL", "MySQL", "AWS", "S3",
 permalink: /database-backups-with-retention-limiting/
 ---
 
-This is a bit of an update on the latest version of [Martilla](https://github.com/fdoxyz/martilla). The feature introduced that I'm more excited about is the ability to limit the retention of your backups.
+This is a bit of an update on the latest version of [Martilla](https://github.com/fdocr/martilla). The feature introduced that I'm more excited about is the ability to limit the retention of your backups.
 
 This will be a walkthrough on how to backup a PostgreSQL DB to AWS S3 and easily enforce a retention limit. [This other blog post](/martilla-tool-for-db-backups) gives an introduction to the CLI tool used.
 
@@ -17,7 +17,7 @@ For the sake of the walkthrough we'll stick to the simple daily backups with 7 d
 
 ## Prerequisites
 
-A working Ruby installation, a PostgreSQL database to backup and the [Martilla](https://github.com/fdoxyz/martilla) CLI tool
+A working Ruby installation, a PostgreSQL database to backup and the [Martilla](https://github.com/fdocr/martilla) CLI tool
 
 ```sh
 $ gem install martilla
@@ -73,7 +73,7 @@ $ export PG_PASSWORD="my_db_password"
 
 ## Storage
 
-AWS S3 has quite a few configurable options ([full list here](https://github.com/fdoxyz/martilla#storages)), but we can make use of ENV variables for sensitive data again. The `storage` directive needs to look like the following snippet
+AWS S3 has quite a few configurable options ([full list here](https://github.com/fdocr/martilla#storages)), but we can make use of ENV variables for sensitive data again. The `storage` directive needs to look like the following snippet
 
 ```yaml
 storage:
@@ -115,7 +115,7 @@ The following `notifiers` directive sends you a Slack notification on a specific
 
 There's also SMTP, AWS SES and other email notifiers you can configure. If you rather only get notified when the backups are failing set `send_success` & `send_failure` as options with `true`/`false` values.
 
-For more details on all the available options check [the docs](https://github.com/fdoxyz/martilla#notifiers.)
+For more details on all the available options check [the docs](https://github.com/fdocr/martilla#notifiers.)
 
 ## Test it out!
 
@@ -169,6 +169,6 @@ notifiers:
 
 ## Conclusions
 
-Martilla is a very young project and I'm striving to keep it reliable & easy to configure for simple use cases. [Bug reports](https://github.com/fdoxyz/martilla/issues) and any other type of feedback/contribution is greatly appreciated!
+Martilla is a very young project and I'm striving to keep it reliable & easy to configure for simple use cases. [Bug reports](https://github.com/fdocr/martilla/issues) and any other type of feedback/contribution is greatly appreciated!
 
 Hope I can write about a new set of features soon (aiming for a backup restoration command). Pura Vida!

@@ -31,7 +31,7 @@ So you want to expose 3 services to the public internet, they're 3 web apps that
 
 ## Reverse proxy separate domain requests to the respective service
 
-There are many different ways we can achieve this. However, we do want a way to make each domain accessible with HTTPS using Let's Encrypt. Since this wasn't easy (at least I couldn't find it possible) with existing tools I coded a very simple CLI that would help automate this: [lecli](https://github.com/fdoxyz/lecli).
+There are many different ways we can achieve this. However, we do want a way to make each domain accessible with HTTPS using Let's Encrypt. Since this wasn't easy (at least I couldn't find it possible) with existing tools I coded a very simple CLI that would help automate this: [lecli](https://github.com/fdocr/lecli).
 
 Also, [based on a previous attempt I posted a while ago](https://visualcosita.xyz/post/publishing-services-using-docker-compose-and-nginx-with-https) I decided to receive all incoming requests in a small NGINX container. This entrypoint will handle TLS and reverse proxy to the respective A, B, and C service. This would actually make all services private, and the only public facing service with access to ports `80` & `443` would be the reverse proxy.
 
@@ -90,7 +90,7 @@ I know this may seem as plenty of moving parts, bear with me though. At this poi
 * Work as reverse proxy to 3 webapps that serve each domain (service discovery and load balancing is managed by Swarm networking)
 * Redirect Let's Encrypt domain validation requests to our "support server"
 
-We can now proceed by creating a GitHub private repo with the `nginx.conf` and `Dockerfile` for versioning. All we need is the support server to periodically renew the certificates ([lecli](https://github.com/fdoxyz/lecli)), then build this small reverse proxy container and redeploy it on our cluster.
+We can now proceed by creating a GitHub private repo with the `nginx.conf` and `Dockerfile` for versioning. All we need is the support server to periodically renew the certificates ([lecli](https://github.com/fdocr/lecli)), then build this small reverse proxy container and redeploy it on our cluster.
 
 ## The support server (on DigitalOcean)
 
@@ -98,7 +98,7 @@ I know this is lazy naming and there could even be a better way to include this 
 
 In the end, plenty of cloud providers will give you instances for $5/month or less so it shouldn't be a big deal... [Sign up with this link and get $10 free on DigitalOcean](https://m.do.co/c/a0486648b173) to kickstart your experimenting! (which will help me out too :winkwink:)
 
-Now back to it, this support server will have a cron job that will execute the [lecli CLI](https://github.com/fdoxyz/lecli). Head over to that repo and take a look at the README to understand the basics of how it works. Besides installing it with `gem install lecli`, you'll need to create a `build_proxy.sh` script to be executed after lecli has successfully generated new certificates. Something like the following:
+Now back to it, this support server will have a cron job that will execute the [lecli CLI](https://github.com/fdocr/lecli). Head over to that repo and take a look at the README to understand the basics of how it works. Besides installing it with `gem install lecli`, you'll need to create a `build_proxy.sh` script to be executed after lecli has successfully generated new certificates. Something like the following:
 
 ```
 #!/bin/sh
@@ -142,7 +142,7 @@ You now need the support server to respond to those requests. This can do the tr
 docker run -d --name simple-server --restart -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
 ```
 
-Now just make sure the simple-server containers' volume matches the [challenges_relative_path](https://github.com/fdoxyz/lecli#lecliyml) so the lecli CLI tokens are accessible [when requested by Let's Encrypt](https://github.com/fdoxyz/lecli#the-flow).
+Now just make sure the simple-server containers' volume matches the [challenges_relative_path](https://github.com/fdocr/lecli#lecliyml) so the lecli CLI tokens are accessible [when requested by Let's Encrypt](https://github.com/fdocr/lecli#the-flow).
 
 That's it! Your cluster's reverse proxy is relaying Let's Encrypt requests to your support server.
 

@@ -172,7 +172,7 @@ services:
       - front-tier
 
   db:
-    image: fdoxyz/test-postgres
+    image: fdocr/test-postgres
     restart: always
     networks:
       - db-tier

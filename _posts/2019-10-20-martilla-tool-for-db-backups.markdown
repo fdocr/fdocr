@@ -5,7 +5,7 @@ tags: ["martilla", "cli", "backups", "automation", "postgres", "mysql"]
 permalink: /martilla-tool-for-db-backups/
 ---
 
-[Martilla](https://github.com/fdoxyz/martilla) is a project I've been working on recently. It's a CLI tool to help automate database backups. It's main objectives are to remain modular, configurable and simple to understand.
+[Martilla](https://github.com/fdocr/martilla) is a project I've been working on recently. It's a CLI tool to help automate database backups. It's main objectives are to remain modular, configurable and simple to understand.
 
 I was heavily inspired by the successful [Backup](https://github.com/backup/backup) project. The way they mix & match database engines, storage solutions, notifiers and other utilities made me a user of them. In the last couple of years support has decreased though, so I'm decided to work with this simplified concept (also to replace the DSL with a ruby-agnostic config file).
 
@@ -85,9 +85,9 @@ Now if a problem happens and your backup fails you'll have visibility of it righ
 
 ## Hacktoberfest
 
-Thanks to [Hacktoberfest](https://hacktoberfest.digitalocean.com/) we got [our first contribution](https://github.com/fdoxyz/martilla/pull/2) and that's how we have Slack notification support!
+Thanks to [Hacktoberfest](https://hacktoberfest.digitalocean.com/) we got [our first contribution](https://github.com/fdocr/martilla/pull/2) and that's how we have Slack notification support!
 
-If you're looking for a Ruby project to contribute during this last stretch of "hacktober" take a look at [our open issues](https://github.com/fdoxyz/martilla/issues). I'll be happy to guide you through questions you might have.
+If you're looking for a Ruby project to contribute during this last stretch of "hacktober" take a look at [our open issues](https://github.com/fdocr/martilla/issues). I'll be happy to guide you through questions you might have.
 
 ## Conclusions
 
@@ -95,4 +95,4 @@ Martilla is meant to be a "simple backup tool for simple everyday use". High thr
 
 For smaller deployments and side projects this might be an interesting addition to your toolbelt. For future releases I'm thinking of features like more integrations (databases, storages and notifiers), a command to automatically restore a backup and more customizable options.
 
-That's it for now though, I hope this was helpful and check out our [GitHub repo](https://github.com/fdoxyz/martilla) for more in-depth usage details. Pura vida!
+That's it for now though, I hope this was helpful and check out our [GitHub repo](https://github.com/fdocr/martilla) for more in-depth usage details. Pura vida!

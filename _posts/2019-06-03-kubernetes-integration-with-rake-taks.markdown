@@ -5,7 +5,7 @@ tags: ["Activek8s", "Docker", "Kubernetes", "cluster", "kubectl", "Ruby", "Rails
 permalink: /kubernetes-integration-with-rake-tasks/
 ---
 
-[Activek8s](https://github.com/fdoxyz/activek8s) is a gem that relies on certain conventions to provide a thorough [Kubernetes](https://kubernetes.io/) integration on a set of Rake tasks. The gem is a byproduct of a project that makes use of Kubernetes to orchestrate our services and other tools (Redis, CI/CD, logging, etc). This is not the absolute truth, it's only a solution that worked for our team and we [open sourced on GitHub](https://github.com/fdoxyz/activek8s).
+[Activek8s](https://github.com/fdocr/activek8s) is a gem that relies on certain conventions to provide a thorough [Kubernetes](https://kubernetes.io/) integration on a set of Rake tasks. The gem is a byproduct of a project that makes use of Kubernetes to orchestrate our services and other tools (Redis, CI/CD, logging, etc). This is not the absolute truth, it's only a solution that worked for our team and we [open sourced on GitHub](https://github.com/fdocr/activek8s).
 
 ## Motivation
 
@@ -29,7 +29,7 @@ __NOTE:__ In the previous feature list, the term "service" refers to any Dockeri
 
 ## How to deploy and rollback
 
-The "in detail" documentation can be found in the [project's README](https://github.com/fdoxyz/activek8s). But a simple deploy will work with the following command
+The "in detail" documentation can be found in the [project's README](https://github.com/fdocr/activek8s). But a simple deploy will work with the following command
 
 ```ruby
 # Will deploy using the 'production' namespace and will use the container IMAGE_TAG 'prod-50'
@@ -83,7 +83,7 @@ There's plenty of important features we want to add in the project, but feedback
   * An init task for easy setup on a new project
   * Direct rails console connection to a working pod in the cluster
 
-Again all feedback is appreciated, feel free to browse around our [on our GitHub issues](https://github.com/fdoxyz/activek8s/issues).
+Again all feedback is appreciated, feel free to browse around our [on our GitHub issues](https://github.com/fdocr/activek8s/issues).
 
 ## Conclusion
 
