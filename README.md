@@ -1,5 +1,5 @@
-Hi 👋🏼
+Hola, hi, hello 👋🏼
 
-Check out [my little corner of the internet](https://fdo.cr)
+[fdo.cr](https://fdo.cr) is my little corner of the internet.
 
 Pura vida 🌴
