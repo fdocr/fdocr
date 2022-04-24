@@ -20,5 +20,7 @@ layout: splash
     <p>Read more <a href="/about">about me</a>.</p>
 
     <p><a href="/blog">I blog here</a>, and also in <a href="https://dev.to/fdocr">dev.to/fdocr</a>.</p>
+    
+    <p>I'm also building a crypto/finance project in <a href="https://cmm.fdo.cr">cmm.fdo.cr</a></p>
   </div>
 </main>
