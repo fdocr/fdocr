@@ -141,7 +141,7 @@ That's likely a lot to take in, but if interested in comparing it to Ruby or oth
 
 Overall there's model manipulation (i.e. using the `snakes` from the `board` of the current `context`), utility method usage from the models (i.e. calls to `@context.valid_moves`), reusing of `RandomValid` & `ChaseClosestFood` strategies, and `Utils.flood_fill`, which is my implementation of [Flood Fill algorithm](https://en.wikipedia.org/wiki/Flood_fill).
 
-My first version of this strategy was a clunky attempting to brute-force a "look ahead" simulation of all possible scenarios. I scrapped that idea in favor of the above for now.
+My first version of this strategy was a clunky attempt to brute-force a "look ahead" simulation of all possible scenarios. I scrapped that idea in favor of the above for now.
 
 ## Leaderboard results
 
