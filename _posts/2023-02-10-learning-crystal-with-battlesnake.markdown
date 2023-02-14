@@ -1,6 +1,6 @@
 ---
 title: "Learning Crystal with Battlesnake"
-date: 2023-01-13 17:00:00 -0600
+date: 2023-02-10 17:00:00 -0600
 tags: ["Crystal", "crystal-lang", "crystal lang", "oss", "github", "open source", "battlesnake"]
 permalink: /learning-crystal-with-battlesnake/
 ---
