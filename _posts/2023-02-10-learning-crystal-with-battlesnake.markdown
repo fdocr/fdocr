@@ -5,11 +5,11 @@ tags: ["Crystal", "crystal-lang", "crystal lang", "oss", "github", "open source"
 permalink: /learning-crystal-with-battlesnake/
 ---
 
-Recently I've been interested in [Crystal lang](https://crystal-lang.org/) so I worked on a Battlesnake implementation to get more practice under my belt.
+Recently I've been interested in [Crystal lang](https://crystal-lang.org/) so I worked on a Battlesnake implementation to get more practice under my belt. I'm sharing an overview of it in this post and the code is [open source on GitHub](https://github.com/fdocr/crystalsnake).
 
 [Battlesnake](https://play.battlesnake.com/) is a multiplayer game where a small server you write plays a _survival-style_ snake game paired with snakes implemented by others.
 
-## About the app
+## The app
 
 I'm using [Kemal](https://github.com/fdocr/CrystalSnake) for framework. The simplicity (Ruby/Sinatra similarity) won me over when paired with Crystal performance. This is what the entire Battlenake API implementation looks like at the time of this writing:
 
@@ -54,40 +54,47 @@ post "/end" do |env|
 end
 ```
 
-Quite Ruby-like so I hope it's easy to follow along whether used to it or not. `/start` + `/end` aren't actually doing anything other than parsing the payload provided and `/` responds with the snake's skin customizations. `/move` picks from the existing strategies to respond based on an ENV variable.
+Quite Ruby-like so I hope it's easy to follow along whether you've written Crystal before or not.
+
+`/start` + `/end` aren't actually doing anything other than parsing the payload provided and `/` responds with the snake's skin customizations. `/move` picks from the existing strategies to respond based on an ENV variable.
 
 The devil is in the details since the bulk of the logic lives in the models (parse game context from request payload, house a few utility methods, etc), strategies to respond with a move and utility algorithms. They all feel easy to follow along though.
 
-All IMO notes here: So far I haven't felt the need to work with macros so it's been very similar to a Ruby project. Reworking data structures on the fly (while working/re-working strategies) took some new time/energy to get right compared to Ruby. There's been close to 0 debugging time related to exceptions I would've likely had to catch when putting together a Ruby script because of the compiler (maybe? 🤓). So overall an interesting tradeoff of sorts.
+IMO notes/thoughts so far:
+
+> I haven't felt the need to work with macros yet so it's been very similar to a Ruby project.
+> 
+> Reworking data structures on the fly (while working/re-working strategies) took some new time/energy to get right compared to Ruby. There's been close to 0 debugging time related to exceptions I would've likely had to catch when putting together a Ruby script because of the compiler (maybe? likely?).
+> 
+> I have a clunky `env.params.json.to_json` up there that bothers me a bit. I think that could be cleaned up by figuring out the way to get the raw (String) payload instead of the Kemal parsed (Hash/Object) parameter though. That's a `TODO` for now.
 
 ## Strategies & Algorithms implemented
 
-Since Crystal is object oriented I created a abstract/virtual class that all strategies inherit from.
+Since Crystal is object oriented I created an abstract/virtual class that all strategies inherit from.
 
-- `RandomValid` checks all the valid moves for your snake on the current context
+- `RandomValid` considers all the valid moves for your snake on the current context and picks one at random
   - Takes into account walls and other snakes' current position
-- `ChaseClosestFood` and `ChaseRandomFood` both aim towards food on the board and differ how they pick their target (Closest vs Random)
+- `ChaseClosestFood` and `ChaseRandomFood` both aim towards food on the board and differ in how they pick their target (Closest vs Random)
   - They re-use `RandomValid` in some scenarios (i.e. can't reach food)
-  - They use [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to find the best route towards a target (food).
+  - They use [A* search algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm) to find the best route towards a target (food in this case but can be used on any Point on the board)
 
 The re-usability of strategies makes for a cool way to mix & match them, meaning I can build on top of each other or existing algorithms. The food chaser ones won all the challenges (not sure if challenges are still a thing after the recent UI revamp) so that started to show some potential.
 
-`CautiousCarol` is a smarter strategy I implemented and looks like this:
+`CautiousCarol` is a heuristic strategy I implemented and looks like this:
 
 ```crystal
 # Strategy that chases the closest available food from the board with caution
-# against head-to-head collisions by chosing the move with the larger empty
-# area available when it's dangerous to move towards the chosen target
+# against head-to-head collisions. When a potentially dangerous move is in the
+# way it analyzes the other valid moves available and picks the one with the 
+# most open area of the board to avoid enclosed spaces.
 class Strategy::CautiousCarol < Strategy::Base
   def move
-    enemies = @context.board.snakes.reject { |s| s.id == @context.you.id }
-    enemy_count = enemies.count { true }
-
     valid_moves = @context.valid_moves(@context.you.head)
     return RandomValid.new(@context).move if valid_moves[:moves].empty?
 
     # Check for head-to-head collision possibilities
     dangerous_moves = [] of BattleSnake::Point
+    enemies = @context.board.snakes.reject { |s| s.id == @context.you.id }
     enemies.each do |snake|
       next if snake.head <=> @context.you.head > 2
       next if snake.body.size < @context.you.body.size
@@ -130,11 +137,11 @@ class Strategy::CautiousCarol < Strategy::Base
 end
 ```
 
-That's likely a lot to take in, but try if interested in comparing it to Ruby or other languages. 
+That's likely a lot to take in, but if interested in comparing it to Ruby or other languages give it a try and ask me about it. I'm not that experienced in Crystal so there are likely details that could improve this.
 
-There's model manipulation (i.e. using the `snakes` from the `board` of the current `context`), utility method usage on the models (i.e. calls to `@context.valid_moves`), reusing of `RandomValid` & `ChaseClosestFood` strategies, and `Utils.flood_fill` which is my implementation of [Flood Fill algorithm](https://en.wikipedia.org/wiki/Flood_fill).
+Overall there's model manipulation (i.e. using the `snakes` from the `board` of the current `context`), utility method usage from the models (i.e. calls to `@context.valid_moves`), reusing of `RandomValid` & `ChaseClosestFood` strategies, and `Utils.flood_fill`, which is my implementation of [Flood Fill algorithm](https://en.wikipedia.org/wiki/Flood_fill).
 
-My first version of this strategy was clunky at attempting a brute-force "look ahead" simulation of all possible scenarios. I scrapped that idea in favor of the above.
+My first version of this strategy was a clunky attempting to brute-force a "look ahead" simulation of all possible scenarios. I scrapped that idea in favor of the above for now.
 
 ## Leaderboard results
 
@@ -146,7 +153,7 @@ After the fix with the code above on `CautiousCarol` and another couple of days 
 
 ![Standard leaderboard first run](/assets/standard-second-run.png)
 
-I also figured why not rank on the Duels leaderboard (1v1 on 11x11 board) and apparently worked even better there (in ranking spot but fewer points so not sure how much better 😅)
+I also realized that same snake could rank on the Duels leaderboard too (1v1 on 11x11 board). Apparently `CautiousCarol` performs better there (in ranking position but fewer points so I'm not sure how much better really 😅)
 
 ![Duels leaderboard run](/assets/duels-leaderboard.png)
 
@@ -154,6 +161,6 @@ I also figured why not rank on the Duels leaderboard (1v1 on 11x11 board) and ap
 
 Crystal has felt easy to read and write for me, quite nice to use overall and very similar to Ruby in lots of ways (specially at this level without diving into macros). The project [is open source on GitHub](https://github.com/fdocr/CrystalSnake) if interested in checking it out.
 
-I hope this is the first of a post series on other specific Crystal learnings I had while experimenting here. Also might update if I come up with new/better strategies.
+I hope this is the first of a few posts on other specific Crystal learnings I had while experimenting here. Also might update if I come up with new/better strategies.
 
 Pura vida.
