@@ -1,5 +1,5 @@
 ---
-title: "Deploy Crystal app with Docker and Opentelemetry"
+title: "Deploy a Crystal app with Docker and Opentelemetry"
 date: 2023-02-14 12:00:00 -0600
 tags: ["Crystal", "crystal-lang", "crystal lang", "oss", "github", "open source", "opentelemetry", "digitalocean", "docker"]
 permalink: /deploy-crystal-app-with-docker-and-opentelemetry/
