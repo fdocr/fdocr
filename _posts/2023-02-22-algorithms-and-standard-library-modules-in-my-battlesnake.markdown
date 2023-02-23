@@ -51,6 +51,8 @@ That's how `CautiousCarol` decides to take a left instead of running into an enc
 
 ## Conclusions
 
+There are other modules/mixins that can be included or used to extend classes (i.e. [Enumerable](https://crystal-lang.org/api/1.7.2/Enumerable.html)), so these are just two situations applied to this specific project.
+
 I had flashbacks to university memories when working on these. Nostalgic and fun. The cool thing is that now every new strategy I can work on will be able to use any of these if need be.
 
 Kudos to the BattleSnake team for the resources they upload, like the [Deep Learning: Useful Battlesnake Algorithms
