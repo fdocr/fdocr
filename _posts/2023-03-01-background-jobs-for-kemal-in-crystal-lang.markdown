@@ -1,8 +1,8 @@
 ---
-title: "Background job worker for Kemal server in Crystal lang"
+title: "Background jobs for Kemal server in Crystal lang"
 date: 2023-03-01 11:00:00 -0600
 tags: ["Crystal", "crystal-lang", "crystal lang", "oss", "github", "open source", "background worker", "mosquito", "background job"]
-permalink: /background-job-worker-in-crystal-lang
+permalink: /background-jobs-for-kemal-in-crystal-lang
 ---
 
 Yet another post about the [Battlesnake project](/learning-crystal-with-battlesnake/) I've been working on while diving in [Crystal lang](https://crystal-lang.org/).
