@@ -1,5 +1,5 @@
 ---
-title: "Keeping up with my Cat's 💩 using a Raspberry Pi"
+title: "Keeping up with my cat's 💩 using a Raspberry Pi"
 date: 2023-05-23 11:00:00 -0600
 tags: ["Raspberry Pi", "python", "automation"]
 permalink: /keeping-up-with-my-cats-litter-box-using-a-raspberry-pi
@@ -22,7 +22,7 @@ I have her litter box in my second bathroom's shower. The bathroom has an extrac
 To mitigate the smell I wanted the lights to turn on when Dua goes in her litter box. To do this I put together a few things:
 
 - [RaspberryPi Zero W](https://www.raspberrypi.com/products/raspberry-pi-zero-w/)
-  - WiFi support was goal
+  - WiFi support was the goal
 - [PIR motion sensor](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work)
   - Placed on the bathroom wall with "velcro stickers"
 - Smart switch for bathroom lights (any brand will do) paired with an Alexa
@@ -47,7 +47,7 @@ Here's what the hardware looks like in action
 
 With all of this in place I went a step further and added Opentelemetry to track the stats of how often the routine was being triggered on [Honeycomb](https://honeycomb.io).
 
-I wanted to know if I was turning on the bathroom lights over false positives from the motion sensor, but after some tests it simply serves to the purpose of telling how often she goes in her litter box.
+I wanted to know if I was turning on the bathroom lights over false positives from the motion sensor, but after some tests it simply serves the purpose of telling how often she goes in her litter box.
 
 ![Last 7 days 💩 activity](/assets/7-days-activity.png)
 
