@@ -1,0 +1,20 @@
+---
+title: "CrystalConf 2023"
+date: 2023-12-05 22:00:00 -0600
+tags: ["Crystal", "crystal-lang", "crystal lang", "oss", "github", "open source", "conference talk", "battlesnake"]
+permalink: /crystal-conf-2023
+---
+
+Exciting news for me: I gave a talk at [CrystalConf 2023](https://crystal-lang.org/events/2023-crystal-berlin/)!
+
+I've been working on an open source Battlesnake server implementation at [`fdocr/CrystalSnake`](https://github.com/fdocr/CrystalSnake) for some time now. I already shared a few blog posts about this project. Read the [most recent one here](/background-jobs-for-kemal-in-crystal-lang) or binge through them on my [DEV Series](https://dev.to/fdocr/series/21844).
+
+In this talk I went a bit more in depth, with beginner developers in mind too, than what I already shared in the blog posts. Watching myself on the pre-recorded session wasn't easy for me, I hope it's more enjoyable for everyone else though!
+
+The recording is available on YouTube right here 🫡
+
+<iframe style="margin-top: 40px; margin-bottom: 40px; width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/yCixvVOGmNM?si=KnidMNfkb8oRr6Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+All the talks from the conference are also available [in this playlist](https://www.youtube.com/playlist?list=PLt-CsM4G1WoadONHl3zPN_Ts5PqH8TgMZ). I hope to give another talk, _in person_ this time, sometime soon.
+
+That's all I wanted to share for now. Pura vida!
