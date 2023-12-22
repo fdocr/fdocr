@@ -73,7 +73,7 @@ notifiers:
 - type: ses
   options:
     from: backups@my_domain.com
-    to: fernando@visualcosita.com
+    to: fernando@fdo.cr
     region: 'us-east-1'
     access_key_id: XXXXXXXX
     secret_access_key: YYYYYYYY

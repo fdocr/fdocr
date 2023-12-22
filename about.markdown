@@ -11,6 +11,10 @@ I've been recently focused on backend & full-stack web development but have also
  * Ruby on Rails
     * Fullstack work with modern Frontend frameworks
     * Experienced also with API only backend solutions
+ * Crystal Language web development
+    * [Universal Deep Link (UDL) Server](https://github.com/fdocr/udl-server)
+    * [Competitive BattleSnake template](https://github.com/fdocr/CrystalSnake)
+    * Contributing to a few Open Source shards
  * (Ruby) Gem publishing
     * [lecli](https://rubygems.org/gems/lecli)
     * [activek8s](https://rubygems.org/gems/activek8s)
@@ -31,14 +35,14 @@ I've been recently focused on backend & full-stack web development but have also
     * Swift
     * Objective-C
  * NodeJS backend development
- * Interested in other emerging technologies like Crystal programming language. Some of my blog posts on this:
+ * Some of my blog posts where I document my journey learning a new programming language (Crystal-lang):
     * [Deploy dockerized app with Opentelemetry monitoring](/deploy-crystal-app-with-docker-and-opentelemetry/)
     * [Database integration](/database-for-kemal-server-in-crystal-lang)
     * [Background job processing](/background-jobs-for-kemal-in-crystal-lang)
     * [Documenting Crystal OSS projects](/documenting-a-crystal-open-source-project/)
 
- Here's [my personal blog](/blog) and my [DEV profile (dev.to/fdocr)](https://dev.to/fdocr).
+ You're reading [my personal blog](/) but I also crosspost on [DEV (dev.to/fdocr)](https://dev.to/fdocr).
 
- [![Coffee Sloth](/assets/coffee_sloth.jpeg "Nature Vectors by Vecteezy")](https://www.vecteezy.com/free-vector/nature)
+ [![Coffee Sloth](/assets/coffee_sloth.png "Nature Vectors by Vecteezy")](https://www.vecteezy.com/free-vector/nature)
 
 Feel free to reach out and say hi using any of the links listed below

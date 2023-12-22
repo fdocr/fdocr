@@ -4,10 +4,46 @@
   {%- include head.html -%}
 
   <body>
+    {%- include header.html -%}
+
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      <div class="wrapper splash-display mt-5">
         {{ content }}
       </div>
+
+      <div class="social-links-horizontal mb-30">
+        <a href="https://github.com/fdocr"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a>
+        <a href="https://www.twitter.com/fdocr_"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a>
+      </div>
+
+      {%- if site.posts.size > 0 -%}
+        <div class="container">
+          <hr class="mb-60">
+        </div>
+
+        <ul class="post-list splash-post-list mb-60">
+          {%- for post in site.posts -%}
+          <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+
+        <p class="feed-subscribe container">
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
+          </a>
+        </p>
+      {%- endif -%}
     </main>
   </body>
 

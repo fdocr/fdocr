@@ -10,18 +10,56 @@ img {
   margin: 30px auto 30px auto;
 }
 
+.mt-5 {
+  margin-top: 10px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.container {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
 .splash-display {
-  color: $coffee !important;
-  margin: 35% 0 45% 0;
-  font-size: 2em;
-  line-height: 1;
-  letter-spacing: 3px;
-  font-family: 'Ubuntu', Arial;
+  font-size: 20px;
+  color: #626262;
+  // font-family: 'Ubuntu', Arial;
+}
+
+.splash-post-list {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
+.social-links-horizontal {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.svg-icon-large {
+  width: 64px;
+  height: 64px;
+  fill: #828282;
+  padding-right: 5px;
 }
 
 @media (min-width: 550px) {
   .splash-display {
-    font-size: 4em;
-    margin: 10% 0;
+    // font-size: 2em;
   }
 }

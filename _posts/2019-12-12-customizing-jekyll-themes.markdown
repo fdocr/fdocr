@@ -38,4 +38,4 @@ While working on my site I was constantly browsing through the Minima GitHub rep
 
 Talented people worked on themes that are both aesthetically pleasing and functional (responsive). Why not just add a little spice on top of that great foundation instead of half writing something from scratch?
 
-[visualcosita.com](https://visualcosita.com/) is the result of my attempt to switch it up a bit. It will forever be a work in progress, but I'll focus more on the content rather than the site itself for a while now. Pura vida!
+[fdo.cr](https://fdo.cr/) is the result of my attempt to switch it up a bit. It will forever be a work in progress, but I'll focus more on the content rather than the site itself for a while now. Pura vida!

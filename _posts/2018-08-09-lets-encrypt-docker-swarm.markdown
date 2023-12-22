@@ -19,7 +19,7 @@ I'm not going to talk about the good Kubernetes brings to the table (it's actual
     * Load balancing within services
     * Rolling updates
 
-Despite these (and probably other reasons) the most important for me is: **I want to do less ops**. I can't stress this enough, since I'm using this project to host my [blog](https://visualcosita.xyz/) and other side projects. My primary objective is to **focus on the development of these services** and not on keeping up with state of the art container orchestration.
+Despite these (and probably other reasons) the most important for me is: **I want to do less ops**. I can't stress this enough, since I'm using this project to host my [blog](/) and other side projects. My primary objective is to **focus on the development of these services** and not on keeping up with state of the art container orchestration.
 
 If "the buzz" is on Kubernetes while Swarm is considered [boring technology](http://mcfunley.com/choose-boring-technology), then good! That's aligned with my needs, which are clearly not the same as a company with employees working full-time on Ops/DevOps.
 
@@ -33,7 +33,7 @@ So you want to expose 3 services to the public internet, they're 3 web apps that
 
 There are many different ways we can achieve this. However, we do want a way to make each domain accessible with HTTPS using Let's Encrypt. Since this wasn't easy (at least I couldn't find it possible) with existing tools I coded a very simple CLI that would help automate this: [lecli](https://github.com/fdocr/lecli).
 
-Also, [based on a previous attempt I posted a while ago](https://visualcosita.xyz/post/publishing-services-using-docker-compose-and-nginx-with-https) I decided to receive all incoming requests in a small NGINX container. This entrypoint will handle TLS and reverse proxy to the respective A, B, and C service. This would actually make all services private, and the only public facing service with access to ports `80` & `443` would be the reverse proxy.
+Also, [based on a previous attempt I posted a while ago](/publishing-services-using-docker-compose-and-nginx-with-https/) I decided to receive all incoming requests in a small NGINX container. This entrypoint will handle TLS and reverse proxy to the respective A, B, and C service. This would actually make all services private, and the only public facing service with access to ports `80` & `443` would be the reverse proxy.
 
 So, a sample NGINX config snippet file to make this happen would be:
 
@@ -127,7 +127,7 @@ docker stack deploy -c docker-compose.yml --with-registry-auth stack_name
 
 Again, this script is run on the Swarm manager which will gain access to ECR (to pull the new container images available) and redeploy the stack defined in the `docker-compose.yml` file on the cluster.
 
-So far I haven't talked about how to **layout your stack**, and I won't. You can read the Swarm Docs or my previous post on [load balancing on a Swarm cluster](https://visualcosita.xyz/post/publishing-services-using-docker-compose-and-nginx-with-https#compose-file) for ideas (stick to the `docker-compose.yml` file section but **be aware a newer version syntax is out**).
+So far I haven't talked about how to **layout your stack**, and I won't. You can read the Swarm Docs or my previous post on [load balancing on a Swarm cluster](/publishing-services-using-docker-compose-and-nginx-with-https#compose-file) for ideas (stick to the `docker-compose.yml` file section but **be aware a newer version syntax is out**).
 
 ## Making sure Let's Encrypt finds the verification tokens
 
@@ -172,7 +172,7 @@ It's not difficult to see the bottleneck or single point of failure here. As sta
 
 In the end we all strive to have services with millions of users, right? We would be forced to scale our infrastructure to keep up with them as we grow, so I do have a topology that relies on these same principles but will provide a more scalable solution.
 
-As a disclaimer I haven't put this proposed solution to practice so it remains to be tested in a real life scenario. I'm open to suggestions on alternative approaches, but [hear me out on this one](https://visualcosita.xyz/img/conspiracy_meme.jpg)...
+As a disclaimer I haven't put this proposed solution to practice so it remains to be tested in a real life scenario. I'm open to suggestions on alternative approaches, but [hear me out on this one](https://knowyourmeme.com/memes/pepe-silvia)...
 
 ## A load balancer in front of your load balancers, [dawg](https://giphy.com/embed/Iiaru8TEGEbQs)
 
