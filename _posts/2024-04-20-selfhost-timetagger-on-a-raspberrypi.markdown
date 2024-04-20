@@ -1,8 +1,8 @@
 ---
-title: "Selfhost Timetagger in Raspberry Pi"
+title: "Selfhost Timetagger on a Raspberry Pi"
 date: 2024-04-20 10:00:00 -0600
 tags: ["timetagger", "raspberrypi", "raspberry pi", "selfhost", "github", "open source"]
-permalink: /selfhost-timetagger-in-raspberrypi
+permalink: /selfhost-timetagger-on-a-raspberrypi
 ---
 
 A few weeks ago I started looking into options for time tracking software. The goal is to be more aware of how I spend my time throughout the day.
