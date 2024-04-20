@@ -120,7 +120,7 @@ Finally `systemctl daemon-reload` or `sudo reboot` to ensure the services are av
 
 ## Performance
 
-Browsing the app (relatively _aggressively_) while looking in `htop` shows `0.12` on load average which is basically nothing. I ran a quick benchmark with `ab -n 10000 -c 10 https://[SUBDOMAIN].fdo.cr/timetagger/` and saw these results:
+Browsing the app (relatively _aggressively_) while looking in `htop` shows `0.12` on load average which is basically nothing. I ran a quick benchmark with `ab -n 10000 -c 10 https://[SUBDOMAIN].fdo.cr/timetagger/app/demo` and saw these results:
 
 ![Raspberry Pi htop](/assets/timetagger_htop.png "Raspberry Pi htop")
 
