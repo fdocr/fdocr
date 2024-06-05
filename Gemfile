@@ -13,10 +13,11 @@ ruby "3.2.2"
 
 gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "webrick", "~> 1.8.1"
-gem "minima"
+gem "jekyll-theme-so-simple"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-feed"
+  gem "jekyll-paginate"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

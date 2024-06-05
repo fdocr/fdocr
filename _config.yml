@@ -21,19 +21,43 @@
 title: fdo.cr
 author: Fernando Valverde
 email: fernando@fdo.cr
+site:
+  locale: en
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my captain's log, where I document experiences I've had while
-  tinkering with different concepts & technologies. Expect experiments,
-  reflexions and personal opinions.
+  I'm Fernando and this is my captain's log, my little corner of the internet.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fdo.cr" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: fdocr_
-github_username:  fdocr
+read_time: true
+skin: "/assets/css/skins/light.css"
+search_full_content: true
+twitter:
+  username: fdocr_
+author:
+  name: Fernando Valverde
+  picture:
+  email: fernando@fdo.cr
+  twitter: fdocr_
+  links:
+    - title: Twitter
+      url: https://twitter.com/fdocr_
+      icon: fab fa-twitter-square
+    - title: GitHub
+      url: https://github.com/fdocr
+      icon: fab fa-github-square
+
+footer_links:
+  - title: Feed
+    url: /feed.xml
+    icon: fas fa-rss-square
+
+paginate: 15  # amount of posts to show per page
+paginate_path: /page:num/
 
 # Build settings
-theme: minima
+theme: jekyll-theme-so-simple
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
