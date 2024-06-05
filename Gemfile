@@ -13,7 +13,6 @@ ruby "3.2.2"
 
 gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "webrick", "~> 1.8.1"
-gem "jekyll-theme-so-simple"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
