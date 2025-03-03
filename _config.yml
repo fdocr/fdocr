@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: fdo.cr
+title: blog.fdo.cr
 author: Fernando Valverde
 email: fernando@fdo.cr
 site:
@@ -26,7 +26,7 @@ site:
 description: >- # this means to ignore newlines until "baseurl:"
   I'm Fernando and this is my captain's log, my little corner of the internet.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fdo.cr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.fdo.cr" # the base hostname & protocol for your site, e.g. http://example.com
 read_time: true
 skin: "/assets/css/skins/light.css"
 search_full_content: true
