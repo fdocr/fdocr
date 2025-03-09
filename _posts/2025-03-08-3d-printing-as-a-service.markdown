@@ -1,5 +1,5 @@
 ---
-title: "3 printing as a service"
+title: "3d printing as a service"
 date: 2025-03-08 08:00:00 -0600
 tags: ["3d printing", "3d printer", "fdo.cr", "FDO CR", "Costa Rica", "Centroamérica", "México"]
 permalink: /3d-printing-as-a-service
@@ -7,7 +7,7 @@ permalink: /3d-printing-as-a-service
 
 This is the first of a few posts that I'll share on a slightly different topic. Despite being a Software Engineer by trade I'm taking a stab at 3d printing as well, hoping to turn a hobby into a business.
 
-I always had a passion for coding and have felt similarly when diving into the 3 printing world. I've enjoyed designing and manufacturing products for my home in my free time, I'm hoping my designs and products can be found useful to others too.
+I always had a passion for coding and have felt similarly when diving into the 3d printing world. I've enjoyed designing and manufacturing products for my home in my free time, I'm hoping my designs and products can be found useful to others too.
 
 The first of my own design products is a [wall mount for vynil records](https://shop.fdo.cr/products/soporte-discos-vinilos-libra). More of my product designs to come soon.
 
