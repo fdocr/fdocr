@@ -3,6 +3,7 @@ title: "3d printing as a service"
 date: 2025-03-08 08:00:00 -0600
 tags: ["3d printing", "3d printer", "fdo.cr", "FDO CR", "Costa Rica", "Centroamérica", "México"]
 permalink: /3d-printing-as-a-service
+published: false
 ---
 
 This is the first of a few posts that I'll share on a slightly different topic. Despite being a Software Engineer by trade I'm taking a stab at 3d printing as well, hoping to turn a hobby into a business.
