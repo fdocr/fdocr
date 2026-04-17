@@ -7,7 +7,10 @@ permalink: /lightning-talk/
 
 Something big went down last Tuesday, at least for me. Not only [@mattfgl](https://twitter.com/mattfgl) gave an amazing talk on [kubernetes](https://kubernetes.io/) but I got to step in front of a room packed with fellow Docker enthusiasts to give my first lightning talk ever, on my [Dockerized tests in a dockerized Jenkins](/post/running-dockerized-tests-in-jenkins) blog post. Here are the **updated** slides
 
-<style>.embed-container { position: relative; overflow: hidden; height: 470px; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; }</style><div class='embed-container'><iframe src='https://www.slideshare.net/fernandovalverde88/slideshelf' width='490px' height='470px' frameborder='0' marginwidth='0' marginheight='0' scrolling='no' style='border:none;' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/YUpNnu7HKuva1" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; margin-bottom:5px; max-width:100%;" allowfullscreen></iframe>
+<div style="margin-bottom:5px">
+  <strong><a href="https://www.slideshare.net/slideshow/dockerized-tests-with-dockerized-jenkins/62667543" title="dockerized-tests-with-dockerized-jenkins" target="_blank">dockerized-tests-with-dockerized-jenkins</a></strong> from <strong><a href="https://www.slideshare.net/fernandovalverde88" target="_blank">Fernando Valverde</a></strong>
+</div>
 
 `If browsing on a smartphone you might want to rotate your device to visualize the slides. Slideshare's embed is not very mobile friendly`
 
@@ -15,4 +18,4 @@ Now, that was quite an experience... A scary one for sure. Had little time to pr
 
 I sort of screwed up my "demo" a little bit, wanted to SSH into [this](/) VPS and show `docker stats`, but didn't. That way as a new GitHub Pull Request triggered the Jenkins job everyone would get to see new containers created and destroyed in the process. The build was triggered succesfully and everything went smoothly in that sense, but I could've described the process a little better (and the docker commands that executed the tests too).
 
-Oh well, hopefully there will be a next time for me to redeem myself and the **demo Gods** will be on my side next time. Overall I had a good time despite the nerves creeping up on me. Again, [here's the link](/post/running-dockerized-tests-in-jenkins) to the blog post with the detailed steps for the slides presentation. Pura Vida.
+Oh well, hopefully there will be a next time for me to redeem myself and the **demo Gods** will be on my side next time. Overall I had a good time despite the nerves creeping up on me. Pura Vida.
