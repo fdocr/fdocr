@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="intro">
+  <h1 class="intro-title">{{ page.title }}</h1>
+  <p class="intro-lede">Search titles, tags, and excerpts.</p>
+</section>
+
+<form class="search-form" role="search" action="{{ '/search/' | relative_url }}" method="get" data-index="{{ '/search.json' | relative_url }}">
+  <label class="visually-hidden" for="search-input">Search</label>
+  <input
+    id="search-input"
+    class="search-input"
+    type="search"
+    name="q"
+    placeholder="Try Crystal, Docker, golf…"
+    autocomplete="off"
+  >
+</form>
+
+<p class="search-status" id="search-status" hidden></p>
+<div class="post-list" id="search-results"></div>
+
+<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>

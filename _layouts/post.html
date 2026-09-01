@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="article">
+  <header class="article-header">
+    <p class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{% include read-time.html content=content %}</span>
+    </p>
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.tags.size > 0 %}
+      <p class="article-tags">
+        {% for tag in page.tags %}
+          <a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="post-pager" aria-label="Adjacent posts">
+  {% if page.previous %}
+    <a class="pager-item pager-prev" href="{{ page.previous.url | relative_url }}">
+      <span class="pager-label">Older</span>
+      <span class="pager-title">{{ page.previous.title }}</span>
+    </a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  {% if page.next %}
+    <a class="pager-item pager-next" href="{{ page.next.url | relative_url }}">
+      <span class="pager-label">Newer</span>
+      <span class="pager-title">{{ page.next.title }}</span>
+    </a>
+  {% endif %}
+</nav>

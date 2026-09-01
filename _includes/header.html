@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">FDO CR</span>
+      <span class="brand-sub">blog</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      {% for item in site.data.navigation %}
+        <a
+          class="nav-link{% if page.url == item.url %} is-active{% endif %}"
+          href="{{ item.url | relative_url }}"
+        >{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

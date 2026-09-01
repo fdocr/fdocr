@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<section class="intro">
+  <h1 class="intro-title">Captain’s log</h1>
+  <p class="intro-lede">{{ site.description }}</p>
+</section>
+
+<div class="post-list">
+  {% for post in paginator.posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>
+
+{% include pagination.html %}
