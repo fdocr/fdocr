@@ -33,7 +33,7 @@ Agents did most of the heavy lifting but I was pretty intentional on the buildin
 
 It sounds easy, but we need GPS coordinates in a polygon shape and do some math to know how far our current device's GPS coordinates are from our target (the green). We need front, center and back of the polygon, and the front/back are relative to your position (they're not perfect circles).
 
-Since & repeat for 18 holes. Fun stuff that took a couple of hours to code with agents before it was usable.
+Rinse & repeat for 18 holes. Fun stuff that took a couple of hours to code with agents before it was usable.
 
 On the course you don't always get to see the hole (your target) from where you're standing. Here's a side by side view of what I see and what grind shows me:
 
