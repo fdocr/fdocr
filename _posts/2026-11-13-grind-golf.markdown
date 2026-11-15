@@ -12,7 +12,7 @@ In the age of software abundance I built [my own rangefinder app for when I golf
 
 If you're not familiar with golf, it's pretty important to know the distance to your target. For roughly half of those shots you actually do benefit from a rangefinder (laser, GPS watch, mobile app, etc) so a billion dollar industry exists to solve that problem for golfers.
 
-I belong to the subset of players that wants to improve their game and I found inspiration on YouTube. Some different stats that aren't exactly the well known stats used in golf. I was intrigued.
+I belong to the subset of players that puts in some effort to improve their game and I found inspiration on YouTube. A different approach to stats that aren't exactly the well known stats used in golf. I was intrigued.
 
 Since I was already fed up with the ads on an app's free tier I used at the time, it was clear to me I could build my own. One that would help me understand the stats I wanted to improve and serve as a rangefinder while I play, all in one app.
 
